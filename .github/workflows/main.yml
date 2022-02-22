@@ -1,26 +1,23 @@
 name: CI
-on: [push]
-jobs:
-  build:
-    name: Build on Node ${{ matrix.node }} and ${{ matrix.os }}
+on:
+  pull_request:
+    branches: [ main ]
 
-    runs-on: ${{ matrix.os }}
+jobs:
+ build:
+
+    runs-on: ubuntu-latest
+
     strategy:
       matrix:
-        node: ['10.x', '12.x', '14.x']
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        node-version: [10.x, 12.x, 14.x, 15.x]
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-
-      - name: Use Node ${{ matrix.node }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node }}
-
-      - name: Install deps and build (with cache)
-        uses: bahmutov/npm-install@v1
-
-      - name: Build
-        run: yarn build
+          node-version: ${{ matrix.node-version }}
+      - name: Install Dependencies and prepare packages
+        run: npm ci
+      - run: npm run build
