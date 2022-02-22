@@ -1,0 +1,528 @@
+.animated {
+    animation-fill-mode: both;
+  }
+  .parentbox {
+    width: fit-content;
+    height: fit-content;
+  }
+    
+  .add3d{
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+  }
+  .bounceone {
+    animation-name: bounceone;
+  }
+  .reveal {
+    animation-name: reveal;
+  }
+  .pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+  }
+  .rubberband {
+    animation-name: rubberband;
+  }
+  .shake {
+    animation-name: shake;
+  }
+  .wobble {
+    animation-name: wobble;
+  }
+  .animated.flip {
+    backface-visibility: visible;
+    animation-name: flip;
+  }
+  .lightspeed {
+    animation-name: lightspeed;
+    animation-timing-function: ease-out;
+  }
+  .rollin {
+    animation-name: rollin;
+  }
+  .rotatein {
+    animation-name: rotatein;
+  }
+  .hinge {
+    margin: 20px;
+    animation-name: hinge;
+  }
+  
+  .luminance {
+    background: 50% 100% / 50% 50% no-repeat
+                radial-gradient(ellipse at bottom, #000, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+    font-family: "Source Sans Pro", sans-serif;
+    animation: 
+               glow 2500ms linear ;
+  }
+  
+   /*glow*/
+    @keyframes glow {
+      40% {
+        text-shadow: 0 0 8px #000;
+      }
+    }
+  
+  .shadows {
+    font-family: bungee, sans-serif;
+    font-weight: 400;
+    
+    animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+    letter-spacing: 0.4rem;
+  }
+  
+  .gradientone {
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color:#fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientone 2s linear infinite;
+    display: inline-block;
+  }
+  .flipvertical {
+    animation: flipvertical ease ;
+  }
+  .goup {
+    animation: goup ease-out;
+  }
+  .fromtop {
+    animation:  fromtop linear ;
+  }
+  .popoutin {
+    animation: 2s popoutin ease infinite;
+  }
+  
+  .glitchhop {
+    animation: glitchhop 1.5s ease-in-out infinite;
+    font-weight: 900;
+  }
+  
+  /*keyframes*/ 
+  
+  /*bounceone*/
+  @keyframes bounceone {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  /*reveal*/
+  @keyframes reveal {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+  /*pulse*/ 
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  /*rubberband*/
+  @keyframes rubberband {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scaleX(1.25) scaleY(0.75);
+    }
+    40% {
+      transform: scaleX(0.75) scaleY(1.25);
+    }
+    60% {
+      transform: scaleX(1.15) scaleY(0.85);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  /*shake*/ 
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
+    }
+  }
+  /*swing*/
+  @keyframes swing {
+    20% {
+      transform: rotate(15deg);
+    }
+    40% {
+      transform: rotate(-10deg);
+    }
+    60% {
+      transform: rotate(5deg);
+    }
+    80% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .swing {
+    transform-origin: top center;
+    animation-name: swing;
+  }
+  /*wobble*/
+  @keyframes wobble {
+    0% {
+      transform: translateX(0%);
+    }
+    15% {
+      transform: translateX(-25%) rotate(-5deg);
+    }
+    30% {
+      transform: translateX(20%) rotate(3deg);
+    }
+    45% {
+      transform: translateX(-15%) rotate(-3deg);
+    }
+    60% {
+      transform: translateX(10%) rotate(2deg);
+    }
+    75% {
+      transform: translateX(-5%) rotate(-1deg);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  /*flip*/ 
+  @keyframes flip {
+    0% {
+      transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+      animation-timing-function: ease-out;
+    }
+    40% {
+      transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+      animation-timing-function: ease-out;
+    }
+    50% {
+      transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+      animation-timing-function: ease-in;
+    }
+    80% {
+      transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+      animation-timing-function: ease-in;
+    }
+  }
+  /*lightspeed*/
+  @keyframes lightspeed {
+    0% {
+      transform: translateX(100%) skewX(-30deg);
+      opacity: 0;
+    }
+    60% {
+      transform: translateX(-20%) skewX(30deg);
+      opacity: 1;
+    }
+    80% {
+      transform: translateX(0%) skewX(-15deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0%) skewX(0deg);
+      opacity: 1;
+    }
+  }
+  
+  /*rollin*/ 
+  @keyframes rollin {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%) rotate(-120deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px) rotate(0deg);
+    }
+  }
+  
+  /*rotatein*/ 
+  @keyframes rotatein {
+    0% {
+      transform-origin: center center;
+      transform: rotate(-200deg);
+      opacity: 0;
+    }
+    100% {
+      transform-origin: center center;
+      transform: rotate(0);
+      opacity: 1;
+    }
+  }
+  
+  /*hinge*/
+  @keyframes hinge {
+    0% {
+      transform: rotate(0);
+      transform-origin: top left;
+      animation-timing-function: ease-in-out;
+    }
+    20%,
+    60% {
+      transform: rotate(80deg);
+      transform-origin: top left;
+      animation-timing-function: ease-in-out;
+    }
+    40% {
+      transform: rotate(60deg);
+      transform-origin: top left;
+      animation-timing-function: ease-in-out;
+    }
+    80% {
+      transform: rotate(60deg) translateY(0);
+      transform-origin: top left;
+      animation-timing-function: ease-in-out;
+    }
+    100% {
+      transform: translateY(700px);
+    }
+  }
+  
+  /*gradientone*/
+  @keyframes gradientone {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
+  /*flipvertical*/
+  @keyframes flipvertical {
+    0% {
+      opacity: 0;
+      transform: rotateX(90def);
+    }
+    50% {
+      opacity: 1;
+      transform: rotateX(720deg);
+    }
+    100% {
+      /* animate nothing to pause animation at the end */
+      opacity: 1;
+      transform: rotateX(720deg);
+    }
+  }
+  
+  /*goup*/
+  @keyframes goup {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  
+  /*fromtop*/
+  @keyframes fromtop {
+    0% { opacity: 0; transform: translateY(-100%);}
+    25% { opacity: 1; transform: translateY(0%);}
+    50% {
+    }
+    100% {
+    }
+  }
+  
+  /*popoutin*/
+  @keyframes popoutin {
+    0% {
+      
+      transform: scale(0);
+      opacity: 0;
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    25% {
+      
+      transform: scale(1.5);
+      opacity: 1;
+      text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      /* animate nothing to add pause at the end of animation */
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  
+  
+    
+  /*shadows*/
+  
+  @keyframes shadows {
+    0% {
+      text-shadow: none;
+    }
+    10% {
+      text-shadow: 3px 3px 0 ;
+    }
+    20% {
+      text-shadow: 3px 3px 0 ,
+        6px 6px 0 ;
+    }
+    30% {
+      text-shadow: 3px 3px 0 ,
+        6px 6px 0, 9px 9px ;
+    }
+    40% {
+      text-shadow: 3px 3px 0 ,
+        6px 6px 0 , 9px 9px ,
+        12px 12px 0 ;
+    }
+    50% {
+      text-shadow: 3px 3px 0 ,
+        6px 6px 0 , 9px 9px,
+        12px 12px 0 ;
+    }
+    60% {
+      text-shadow: 3px 3px 0 ,
+        6px 6px 0 , 9px 9px ,
+        12px 12px 0 ;
+    }
+    70% {
+      text-shadow: 3px 3px 0 ,
+        6px 6px 0 , 9px 9px ;
+    }
+    80% {
+      text-shadow: 3px 3px 0,
+        6px 6px 0 ;
+    }
+    90% {
+      text-shadow: 3px 3px 0 ;
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    40% {
+      transform: translate(-12px, -12px);
+    }
+    50% {
+      transform: translate(-12px, -12px);
+    }
+    60% {
+      transform: translate(-12px, -12px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+  
+  /*glitchhop*/
+  
+  @keyframes glitchhop {
+    0% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 #0c2ffb, 
+            0 0 0 #2cfcfd, 
+            0 0 0 #fb203b, 
+            0 0 0 #fefc4b;
+    }
+  
+    20% {  
+        transform: translateY(-1em);
+        text-shadow: 
+            0 0.125em 0 #0c2ffb, 
+            0 0.25em 0 #2cfcfd, 
+            0 -0.125em 0 #fb203b, 
+            0 -0.25em 0 #fefc4b;
+    }
+  
+    40% {  
+        transform: translateY(0.5em);
+        text-shadow: 
+            0 -0.0625em 0 #0c2ffb, 
+            0 -0.125em 0 #2cfcfd, 
+            0 0.0625em 0 #fb203b, 
+            0 0.125em 0 #fefc4b;
+    }
+    
+   60% {
+        transform: translateY(-0.25em);
+        text-shadow: 
+            0 0.03125em 0 #0c2ffb, 
+            0 0.0625em 0 #2cfcfd, 
+            0 -0.03125em 0 #fb203b, 
+            0 -0.0625em 0 #fefc4b;
+    }
+  
+    80% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 #0c2ffb, 
+            0 0 0 #2cfcfd, 
+            0 0 0 #fb203b, 
+            0 0 0 #fefc4b;
+    }
+  }
+  
