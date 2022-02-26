@@ -17,6 +17,11 @@ export interface TextAnimProps {
   layer2: string;
   layer3: string;
   layer4: string;
+  styles:object;
+  top:number;
+  right:number;
+  bottom:number;
+  left:number;
 }
 
 const TextAnim: FC<TextAnimProps> = ({
@@ -30,17 +35,20 @@ const TextAnim: FC<TextAnimProps> = ({
   grad1,
   grad2,
   grad3,
-  grad4,
-  layer1,
-  layer2,
-  layer3,
-  layer4,
+  grad4, 
+  left,
+  right,
+  bottom,
+  top,
+ 
 }) => {
   return (
     <div>
       <div className="parentbox">
         <div
+      
           style={{
+            
             color: color,
             animationDuration: `${duration}s`,
             animationIterationCount: count,
@@ -56,12 +64,11 @@ const TextAnim: FC<TextAnimProps> = ({
             ${grad4} 100%
           )`
                 : 'none',
-            textShadow:
-              type === 'shadows'
-                ? `${3}px ${3}px 0 ${layer1}, 6px 6px 0 ${layer2},
-    9px 9px ${layer3}, 12px 12px 0 ${layer4}`
-                : 'none',
-            marginTop: `${5}rem`,
+            marginTop: `${top}rem`,
+            marginLeft:`${left}rem`,
+            marginBottom:`${bottom}rem`,
+            marginRight:`${right}rem`,
+            
           }}
           className={`${type} animated`}
         >

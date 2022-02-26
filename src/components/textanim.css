@@ -49,25 +49,6 @@
     animation-name: hinge;
   }
   
-  .luminance {
-    background: 50% 100% / 50% 50% no-repeat
-                radial-gradient(ellipse at bottom, #000, transparent, transparent);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    
-    font-family: "Source Sans Pro", sans-serif;
-    animation: 
-               glow 2500ms linear ;
-  }
-  
-   /*glow*/
-    @keyframes glow {
-      40% {
-        text-shadow: 0 0 8px #000;
-      }
-    }
-  
   .shadows {
     font-family: bungee, sans-serif;
     font-weight: 400;
@@ -84,7 +65,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradientone 2s linear infinite;
+    animation: gradientone linear;
     display: inline-block;
   }
   .flipvertical {

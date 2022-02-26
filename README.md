@@ -1,181 +1,110 @@
-# TSDX React w/ Storybook User Guide
+# Text Animations React
 
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
+A React.js and typescript package that lets you animates text and add text effects with ease with ease
 
-> This TSDX setup is meant for developing React component libraries (not apps!) that can be published to NPM. If you’re looking to build a React-based app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
-
-> If you’re new to TypeScript and React, checkout [this handy cheatsheet](https://github.com/sw-yx/react-typescript-cheatsheet/)
-
-## Commands
-
-TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
-
-The recommended workflow is to run TSDX in one terminal:
-
-```bash
-npm start # or yarn start
+## Installation
+  With Yarn: 
+  ```bash
+Yarn add text-animations-react
 ```
-
-This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
-
-Then run either Storybook or the example playground:
-
-### Storybook
-
-Run inside another terminal:
-
-```bash
-yarn storybook
+With npm:
+  ```bash
+npm install --save text-animations-react
 ```
+## Usage
 
-This loads the stories from `./stories`.
+The text animations are divided into two,the special animations which is imported as Special and the regular animation with is imported as TextAnim
+see an example below:
+ ```bash
+ //import as special animation
+import {Special} from "text-animations-react"
 
-> NOTE: Stories should reference the components as if using the library, similar to the example playground. This means importing from the root project directory. This has been aliased in the tsconfig and the storybook webpack config as a helper.
+//import as regular animation
+import {TextAnim} from "text-animations-react"
+```
+The difference between the two is that the TextAnim animations is more configurable than Special animations
 
 ### Example
 
-Then run the example inside another:
-
 ```bash
-cd example
-npm i # or yarn to install dependencies
-npm start # or yarn start
+import {TextAnim} from "text-animations-react"
+
+ function App() {
+   return (
+     <TextAnim name="Cool Animation Libary" 
+     size={6} type="bounceone"
+      color="orange"
+      count="infinite"
+       duration={1}/>
+   )
+ }
 ```
 
-The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**, we use [Parcel's aliasing](https://parceljs.org/module_resolution.html#aliases).
+## regular animation i.e TextAnim
 
-To do a one-off build, use `npm run build` or `yarn build`.
+| types  |                                                 Implementation                                   | 
+| -------|:------------------------------------------------------------------------------------------------:| 
+| bounceone| `<TextAnim name="Cool" type="bounceone" color="orange" size={3} count="infinite" duration={2}/>` |
+| reveal   | `<TextAnim name="Cool" type="reveal" color="orange" size={3} count="infinite" duration={4}/>`  |
+| pulse   | `<TextAnim name="Cool" type="pulse" color="orange" size={3} count="infinite" duration={1}/>`   |
+| rubberband| `<TextAnim name="Cool" type="rubberband" color="orange" size={3} count="infinite" duration={2}/>` |
+| shake   | `<TextAnim name="Cool" type="shake" color="orange" size={3} count="infinite" duration={2}/>`   |
+| wobble   | `<TextAnim name="Cool" type="wobble" color="orange" size={3} count="infinite" duration={2}/>`  |
+| flip   | `<TextAnim name="Cool" type="flip" color="orange" size={3} count="infinite" duration={2}/>`   |
+| lightspeed | `<TextAnim name="Cool" type="lightspeed" color="orange" size={3} count="infinite" duration={2}/>` |
+| rollin   | `<TextAnim name="Cool" type="rollin" color="orange" size={3} count="infinite" duration={2} />`   |
+| rotatein | `<TextAnim name="Cool" type="rotatein" color="orange" size={3} count="infinite" duration={2} />`   |
+| hinge   | `<TextAnim name="Cool" type="hinge" color="orange" size={3} count="infinite" duration={2} />`   |
+| gradientone | `<TextAnim name="Cool" type="gradientone" grad1="red" grad2="blue" grad3="green" grad4="yellow" size={3} count="infinite" duration={2} />` |
+| flipvertical | `<TextAnim name="Cool" type="flipvertical" color="orange" size={3} count="infinite" duration={2} >`|
+| goup | `<TextAnim name="Cool" type="goup" color="orange" size={3} count="infinite" duration={2} />`  |
+| fromtop   | `<TextAnim name="Cool" type="fromtop" color="orange" size={3} count="infinite" duration={2} >` |
+| popoutin   | `<TextAnim name="Cool" type="popoutin" color="orange" size={3} count="infinite" duration={2} />` |
+| glitchhop  | `<TextAnim name="Cool" type="glitchhop" color="orange" size={3} count="infinite" duration={2} />` |
+| swing | `<TextAnim name="Cool" type="swing" color="orange" size={3} count="infinite" duration={2} /> `  |
+| shadows |` <TextAnim name="Cool" type="shadows"  color="orange" size={3} count="infinite" duration={2} />`  |
 
-To run tests, use `npm test` or `yarn test`.
+![text-animations-react](https://gifs.com/gif/emeka-ugbanu-text-animations-react-VvZkX1)
 
-## Configuration
 
-Code quality is set up for you with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
+## special animation i.e Special
 
-### Jest
+| types  |                                                 Implementation                                    | 
+| -------|:-------------------------------------------------------------------------------------------------:| 
+| specialone| `<Special name="Nice" type="specialone" color="white" size={4} count="infinite" duration={2}/>`  |
+| specialtwo | `<Special name="Cool" type="specialtwo" color="orange" size={3} count="infinite" duration={4}/>`  |
+| specialthree | `<Special name="Cool" type="specialthree" color="orange" size={3} count="infinite" duration={2}/>` |
+| specialfour|` <Special name="Cool" type="specialfour" color="orange" size={3} count="infinite" duration={2}/>` |
+| one |` <Special name="Cool" type="one" color="orange" size={3} count="infinite" duration={2}/> `  |
+| three |` <Special name="Cool" type="three" color="orange" size={3} count="infinite" duration={2}/> ` |
+| four | `<Special name="Cool" type="four" color="orange" size={3} count="infinite" duration={2}/>`   |
 
-Jest tests are set up to run with `npm test` or `yarn test`.
+>>Notice: The Specialone and Specialthree type can only animate five(5) characters 
 
-### Bundle analysis
+<p align="center">
+  <a href="https://github.com/Emeka-Ugbanu-hub/text-animations-react">
+    <img src="https://gifs.com/gif/emeka-ugbanu-text-animations-react-nRJo2l" />
+  </a>
+</p>
 
-Calculates the real cost of your library using [size-limit](https://github.com/ai/size-limit) with `npm run size` and visulize it with `npm run analyze`.
+## All Properties
 
-#### Setup Files
+| Property | Type       |                          Description                             |
+|------- |:------------:| :--------------------------------------------------------------: |
+|types   | `string`     | `Sets the size of the text`                                      |
+|color   |  `string`    |`Sets the color of the text (color name , hexadecimal)`           |
+|name    |   `string`   | `Sets the value of the text`                                     |
+|top     |  `number`    |`Lets you move the text like a margin-top CSS property would`     |
+|right   |  `number`    |`Lets you move the text like a margin-right CSS property would`   |
+|bottom  |  `number`    |`Lets you move the text like a margin-bottom CSS property would`  |
+|left    |  `number`    |`Lets you move the text like a margin-left CSS property would`    |
+|duration| `number`   |`Sets the animation duration`                                       |
+|delay   |   `number`   |`Sets a delay for the animation`                                  |
+|count   |   `string`   |`Sets how many times you want the animatiuon to run`              |
+|size    |  `number`    |`Sets the size of the text`                                       |
+|grad1   |  `string`    |`This property can only with the "gradientone" type sets the color to be animated (color name,hex)` |
+|grad2   |  `string`    |`This property can only with the "gradientone" type sets the color to be animated (color name,hex)`
+|grad3   |  `string`    |`This property can only with the "gradientone" type sets the color to be animated (color name,hex)`
+|grad4   |  `string`    |`This property can only with the "gradientone" type sets the color to be animated (color name,hex)`
 
-This is the folder structure we set up for you:
 
-```txt
-/example
-  index.html
-  index.tsx       # test your component here in a demo app
-  package.json
-  tsconfig.json
-/src
-  index.tsx       # EDIT THIS
-/test
-  blah.test.tsx   # EDIT THIS
-/stories
-  Thing.stories.tsx # EDIT THIS
-/.storybook
-  main.js
-  preview.js
-.gitignore
-package.json
-README.md         # EDIT THIS
-tsconfig.json
-```
-
-#### React Testing Library
-
-We do not set up `react-testing-library` for you yet, we welcome contributions and documentation on this.
-
-### Rollup
-
-TSDX uses [Rollup](https://rollupjs.org) as a bundler and generates multiple rollup configs for various module formats and build settings. See [Optimizations](#optimizations) for details.
-
-### TypeScript
-
-`tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
-
-## Continuous Integration
-
-### GitHub Actions
-
-Two actions are added by default:
-
-- `main` which installs deps w/ cache, lints, tests, and builds on all pushes against a Node and OS matrix
-- `size` which comments cost comparison of your library on every pull request using [size-limit](https://github.com/ai/size-limit)
-
-## Optimizations
-
-Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
-
-```js
-// ./types/index.d.ts
-declare var __DEV__: boolean;
-
-// inside your code...
-if (__DEV__) {
-  console.log('foo');
-}
-```
-
-You can also choose to install and use [invariant](https://github.com/palmerhq/tsdx#invariant) and [warning](https://github.com/palmerhq/tsdx#warning) functions.
-
-## Module Formats
-
-CJS, ESModules, and UMD module formats are supported.
-
-The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
-
-## Deploying the Example Playground
-
-The Playground is just a simple [Parcel](https://parceljs.org) app, you can deploy it anywhere you would normally deploy that. Here are some guidelines for **manually** deploying with the Netlify CLI (`npm i -g netlify-cli`):
-
-```bash
-cd example # if not already in the example folder
-npm run build # builds to dist
-netlify deploy # deploy the dist folder
-```
-
-Alternatively, if you already have a git repo connected, you can set up continuous deployment with Netlify:
-
-```bash
-netlify init
-# build command: yarn build && cd example && yarn && yarn build
-# directory to deploy: example/dist
-# pick yes for netlify.toml
-```
-
-## Named Exports
-
-Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
-
-## Including Styles
-
-There are many ways to ship styles, including with CSS-in-JS. TSDX has no opinion on this, configure how you like.
-
-For vanilla CSS, you can include it at the root directory and add it to the `files` section in your `package.json`, so that it can be imported separately by your users and run through their bundler's loader.
-
-## Publishing to NPM
-
-We recommend using [np](https://github.com/sindresorhus/np).
-
-## Usage with Lerna
-
-When creating a new package with TSDX within a project set up with Lerna, you might encounter a `Cannot resolve dependency` error when trying to run the `example` project. To fix that you will need to make changes to the `package.json` file _inside the `example` directory_.
-
-The problem is that due to the nature of how dependencies are installed in Lerna projects, the aliases in the example project's `package.json` might not point to the right place, as those dependencies might have been installed in the root of your Lerna project.
-
-Change the `alias` to point to where those packages are actually installed. This depends on the directory structure of your Lerna project, so the actual path might be different from the diff below.
-
-```diff
-   "alias": {
--    "react": "../node_modules/react",
--    "react-dom": "../node_modules/react-dom"
-+    "react": "../../../node_modules/react",
-+    "react-dom": "../../../node_modules/react-dom"
-   },
-```
-
-An alternative to fixing this problem would be to remove aliases altogether and define the dependencies referenced as aliases as dev dependencies instead. [However, that might cause other problems.](https://github.com/palmerhq/tsdx/issues/64)

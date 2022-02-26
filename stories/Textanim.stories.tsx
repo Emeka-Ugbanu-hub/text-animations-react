@@ -29,9 +29,9 @@ export const Default = Template.bind({});
 
 Default.args = {
   name:"EMEKA",
-  type:" add3d",
-  size:7,
+  type:"four",
+  size:4,
   count:"1",
-  color:"white",
-  duration:6
+  color:"orange",
+  duration:2
 };

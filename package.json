@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.4",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -9,6 +9,17 @@
   ],
   "engines": {
     "node": ">=10"
+  },
+  "keywords": [
+    "text animation",
+    "text effect",
+    "https://github.com/Emeka-Ugbanu-hub",
+    "React",
+    "Typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Emeka-Ugbanu-hub/text-animations-react.git"
   },
   "scripts": {
     "start": "tsdx watch",

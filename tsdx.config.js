@@ -6,7 +6,8 @@ module.exports = {
       postcss({
         plugins: [
         ],
-        inject: false,
+        inject: true,
+        extract:false,
       })
     );
     return config;

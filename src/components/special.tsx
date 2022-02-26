@@ -17,6 +17,10 @@ export interface SpecialProps {
   layer2: string;
   layer3: string;
   layer4: string;
+  top:number;
+  left:number;
+  right:number;
+  bottom:number;
 }
 
 const Special: FC<SpecialProps> = ({
@@ -27,6 +31,10 @@ const Special: FC<SpecialProps> = ({
   size,
   delay,
   duration,
+  top,
+  right,
+  left,
+  bottom
 }) => {
   const input = Array.from(name);
   const myspan = input.map((inputs) => (
@@ -38,6 +46,10 @@ const Special: FC<SpecialProps> = ({
         animationDuration: `${duration}s`,
         color: color,
         fontSize: `${size}rem`,
+        marginTop:`${top}rem`,
+        marginRight:`${right}rem`,
+        marginBottom:`${bottom}rem`,
+        marginLeft:`${left}rem`
       }}
     >
       {inputs}
