@@ -17,6 +17,9 @@
     "React",
     "Typescript"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Emeka-Ugbanu-hub/text-animations-react.git"
@@ -46,7 +49,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "text-animations-react",
+  "name": "@emeka-ugbanu-hub/text-animations-react",
   "author": "Emeka Ugbanu",
   "module": "dist/text-animations-react.esm.js",
   "size-limit": [
