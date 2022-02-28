@@ -64,7 +64,8 @@ import {TextAnim} from "text-animations-react"
 | swing | `<TextAnim name="Cool" type="swing" color="orange" size={3} count="infinite" duration={2} /> `  |
 | shadows |` <TextAnim name="Cool" type="shadows"  color="orange" size={3} count="infinite" duration={2} />`  |
 
-![text-animations-react](https://gifs.com/gif/emeka-ugbanu-text-animations-react-VvZkX1)
+
+![text-animations-react](https://j.gifs.com/Z8XolE.gif)
 
 
 ## special animation i.e Special
@@ -81,11 +82,7 @@ import {TextAnim} from "text-animations-react"
 
 >>Notice: The Specialone and Specialthree type can only animate five(5) characters 
 
-<p align="center">
-  <a href="https://github.com/Emeka-Ugbanu-hub/text-animations-react">
-    <img src="https://gifs.com/gif/emeka-ugbanu-text-animations-react-nRJo2l" />
-  </a>
-</p>
+![text-animations-react](https://j.gifs.com/r27vQk.gif)
 
 ## All Properties
 
@@ -107,4 +104,7 @@ import {TextAnim} from "text-animations-react"
 |grad3   |  `string`    |`This property can only with the "gradientone" type sets the color to be animated (color name,hex)`
 |grad4   |  `string`    |`This property can only with the "gradientone" type sets the color to be animated (color name,hex)`
 
+## Issues and Bugs
+
+Let us know if you [found a bug ](https://github.com/Emeka-Ugbanu-hub/text-animations-react/issues)
 
